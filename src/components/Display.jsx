@@ -30,7 +30,7 @@ class Display extends Component {
         "BIT"
     ]
 
-    selectName() {
+    selectName = ()=> {
         let adjNumber = Math.floor(Math.random() * this.adjArray.length);
         let nounNumber = Math.floor(Math.random() * this.nounArray.length)
         console.log(adjNumber);
@@ -49,6 +49,7 @@ class Display extends Component {
                 <h3>call your cat</h3>
                 <h1>{this.state.adj}</h1>
                 <h1>{this.state.noun}</h1>
+                <button onClick={this.selectName}>NEW NICKNAME</button>
             </div>
         );
     }
