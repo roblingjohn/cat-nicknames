@@ -4,7 +4,9 @@ class Display extends Component {
     render() {
         return (
             <div>
-                <h1>Hello world</h1>
+                <h3>call your cat</h3>
+                <h1>TINY</h1>
+                <h1>BEAN</h1>
             </div>
         );
     }
