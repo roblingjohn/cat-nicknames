@@ -16,3 +16,11 @@ h1 {
 h3 {
   font-size: 36px;
 }
+
+.newNickname {
+  width: 90%;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: lavender;
+}

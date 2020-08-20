@@ -49,7 +49,7 @@ class Display extends Component {
                 <h3>call your cat</h3>
                 <h1>{this.state.adj}</h1>
                 <h1>{this.state.noun}</h1>
-                <button onClick={this.selectName}>NEW NICKNAME</button>
+                <button className="newNickname" onClick={this.selectName}>NEW NICKNAME</button>
             </div>
         );
     }
