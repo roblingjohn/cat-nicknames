@@ -19,7 +19,15 @@ class Display extends Component {
         "BABY",
         "STINKY",
         "CUTIE",
-        "LITTLE"
+        "LITTLE",
+        "FLUFFY",
+        "SWEET",
+        "SILLY",
+        "SLLEPY",
+        "CUDDLE",
+        "SASSY",
+        "SLINKY",
+        "FUZZY",
     ]
 
     nounArray = [
@@ -27,14 +35,22 @@ class Display extends Component {
         "KITTY",
         "BABE",
         "BUTT",
-        "BIT"
+        "BIT",
+        "POTATO",
+        "MUFFIN",
+        "ANGEL",
+        "PIE",
+        "FLOOF",
+        "BALL",
+        "MARSHMALLOW",
+        "MAGICIAN",
+        "CUP",
+        "LOAF",
     ]
 
     selectName = ()=> {
         let adjNumber = Math.floor(Math.random() * this.adjArray.length);
         let nounNumber = Math.floor(Math.random() * this.nounArray.length)
-        console.log(adjNumber);
-        console.log(nounNumber);
         this.adjWord = this.adjArray[adjNumber];
         this.nounWord = this.nounArray[nounNumber];
         this.setState({
