@@ -23,7 +23,7 @@ class Display extends Component {
         "FLUFFY",
         "SWEET",
         "SILLY",
-        "SLLEPY",
+        "SLEEPY",
         "CUDDLE",
         "SASSY",
         "SLINKY",
