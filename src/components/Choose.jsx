@@ -22,7 +22,7 @@ class Choose extends Component {
   render() {
     if (this.state.isChosen === true) {
       return (
-        <Redirect 
+        <Redirect
           to={{
             pathname: "/display",
             state: {
@@ -38,22 +38,26 @@ class Choose extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="sex">What sex is your cat?</label>
-          <select id="sex" name="sex">
-            <option value="none">---</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
+          <h3>
+            <label htmlFor="sex">What sex is your cat?</label>
+            <select id="sex" name="sex">
+              <option value="none">---</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </h3>
           <br />
-          <label htmlFor="size">What size is your cat?</label>
-          <select id="size" name="size">
-            <option value="none">---</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br />
-          <button>Gimme a nickname</button>
+          <h3>
+            <label htmlFor="size">What size is your cat?</label>
+            <select id="size" name="size">
+              <option value="none">---</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+            <br />
+            <button class="btn">GIMME A NICKNAME</button>
+          </h3>
         </form>
       </div>
     );
