@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Display extends Component {
     state =  {
         adj: "",
-        noun: ""
+        noun: "",
+        catData: this.props.location.state.catData
     }
     
     adjWord = ""
@@ -12,6 +13,7 @@ class Display extends Component {
 
     componentDidMount() {
         this.selectName();
+        console.log(this.props.location.state.catData)
     }
 
     adjArray = [
