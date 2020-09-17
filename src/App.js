@@ -14,7 +14,7 @@ function App() {
           </Route>
           <Route
             exact
-            path="/display"
+            path="/nickname"
             render={(props) => <Display {...props} />}
           />
           <Route path="*">

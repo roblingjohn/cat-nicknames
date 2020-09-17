@@ -24,7 +24,7 @@ class Choose extends Component {
       return (
         <Redirect
           to={{
-            pathname: "/display",
+            pathname: "/nickname",
             state: {
               catData: {
                 sex: this.state.sex,

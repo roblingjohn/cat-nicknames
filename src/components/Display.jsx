@@ -12,14 +12,14 @@ class Display extends Component {
 
   nounWord = "";
 
-  currentNounArray = [];
-
   componentDidMount() {
     if (this.props.location.state.catData.sex === "male") {
-      this.currentNounArray = this.nounArray.concat(this.maleNounArray);
+      let tempArray = this.nounArray.concat(this.maleNounArray);
+      this.nounArray = tempArray
     } else if (this.props.location.state.catData.sex === "female") {
-      this.currentNounArray = this.nounArray.concat(this.femaleNounArray);
-    } else this.currentNounArray = this.nounArray;
+      let tempArray = this.nounArray.concat(this.femaleNounArray);
+      this.nounArray = tempArray
+    } 
     this.selectName();
     console.log(this.props.location.state.catData);
   }
@@ -63,9 +63,9 @@ class Display extends Component {
 
   selectName = () => {
     let adjNumber = Math.floor(Math.random() * this.adjArray.length);
-    let nounNumber = Math.floor(Math.random() * this.currentNounArray.length);
+    let nounNumber = Math.floor(Math.random() * this.nounArray.length);
     this.adjWord = this.adjArray[adjNumber];
-    this.nounWord = this.currentNounArray[nounNumber];
+    this.nounWord = this.nounArray[nounNumber];
     this.setState({
       adj: this.adjWord,
       noun: this.nounWord,
