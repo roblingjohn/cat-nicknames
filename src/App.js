@@ -9,14 +9,14 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="./cat-nicknames/">
+          <Route exact path="/">
             <Choose />
           </Route>
           <Route
-            path="./cat-nicknames/nickname"
+            exact path="/nickname/"
             render={(props) => <Display {...props} />}
           />
-          <Route path="./cat-nicknames/*">
+          <Route path="*">
             <Choose />
           </Route>
         </Switch>
