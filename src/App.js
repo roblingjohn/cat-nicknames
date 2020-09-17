@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="./">
+          {/* <Route exact path="./">
             <Choose />
-          </Route>
+          </Route> */}
           <Route
             exact
             path="./nickname"
