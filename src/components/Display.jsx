@@ -25,17 +25,18 @@ class Display extends Component {
       this.nounArray = tempArray;
       tempArray = this.adjArray.concat(this.largeAdjArray);
       this.adjArray = tempArray;
+    } else if (this.props.location.state.catData.size === "small") {
+      let tempArray = this.adjArray.concat(this.smallAdjArray);
+      this.adjArray = tempArray;
     }
     this.selectName();
     console.log(this.props.location.state.catData);
   }
 
   adjArray = [
-    "TINY",
     "BABY",
     "STINKY",
     "CUTIE",
-    "LITTLE",
     "FLUFFY",
     "SWEET",
     "SILLY",
@@ -59,7 +60,6 @@ class Display extends Component {
     "FLOOF",
     "BALL",
     "MARSHMALLOW",
-    "CUP",
     "LOAF",
   ];
 
@@ -69,6 +69,8 @@ class Display extends Component {
 
   largeAdjArray = ["CHONKY", "BIG", "TUBBY"];
   largeNounArray = ["CHONK", "TUB"];
+
+  smallAdjArray = ["TINY", "LITTLE", "ITTY", "TEENY"];
 
   selectName = () => {
     let adjNumber = Math.floor(Math.random() * this.adjArray.length);
