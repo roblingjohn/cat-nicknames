@@ -52,7 +52,7 @@ class Choose extends Component {
             <select id="size" name="size">
               <option value="none">---</option>
               <option value="small">Small</option>
-              <option value="medium">Medium</option>
+              {/* <option value="medium">Medium</option> */}
               <option value="large">Large</option>
             </select>
             <br />
