@@ -12,13 +12,11 @@ class Choose extends Component {
       this.setState({
         sex: selection,
       });
-    }
-    else if (choice === "size") {
+    } else if (choice === "size") {
       this.setState({
         size: selection,
       });
-    }
-    else {
+    } else {
       this.setState({
         sex: "female",
       });
@@ -30,7 +28,7 @@ class Choose extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      isChosen: true
+      isChosen: true,
     });
   };
 
@@ -52,44 +50,46 @@ class Choose extends Component {
     }
     return (
       <div>
-          <h3>
-            What sex is your cat?
-          </h3>
-          <button
-            onClick={() => {
-              this.handleClick("sex", "male");
-            }}
-          >
-            Male
-          </button>
-          <button
-            onClick={() => {
-              this.handleClick("sex", "female");
-            }}
-          >
-            Female
-          </button>
-          <br />
-          <h3>
-            What size is your cat?
-          </h3>
-          <button
-            onClick={() => {
-              this.handleClick("size", "small");
-            }}
-          >
-            Small
-          </button>
-          <button
-            onClick={() => {
-              this.handleClick("size", "large");
-            }}
-          >
-            Large
-          </button>
-          <br />
+        <h3>What sex is your cat?</h3>
+        <button
+          className="selectBtn"
+          onClick={() => {
+            this.handleClick("sex", "male");
+          }}
+        >
+          Male
+        </button>
+        <button
+          className="selectBtn"
+          onClick={() => {
+            this.handleClick("sex", "female");
+          }}
+        >
+          Female
+        </button>
+        <br />
+        <h3>What size is your cat?</h3>
+        <button
+          className="selectBtn"
+          onClick={() => {
+            this.handleClick("size", "small");
+          }}
+        >
+          Small
+        </button>
+        <button
+          className="selectBtn"
+          onClick={() => {
+            this.handleClick("size", "large");
+          }}
+        >
+          Large
+        </button>
+        <br />
 
-          <button className="btn" onClick={this.handleSubmit}>GIMME A NICKNAME</button>
+        <button className="btn" onClick={this.handleSubmit}>
+          GIMME A NICKNAME
+        </button>
       </div>
     );
   }
