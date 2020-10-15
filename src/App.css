@@ -37,6 +37,16 @@ h3 {
   margin: 10px;
 }
 
+.selectedBtn{
+  width: 40%;
+  max-width: 200px;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: orangered;
+  margin: 10px;
+}
+
 select {
   height: 36px;
   width: 100px;

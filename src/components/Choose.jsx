@@ -52,7 +52,7 @@ class Choose extends Component {
       <div>
         <h3>What sex is your cat?</h3>
         <button
-          className="selectBtn"
+          className={this.state.sex === "male" ? "selectedBtn" : "selectBtn"}
           onClick={() => {
             this.handleClick("sex", "male");
           }}
@@ -60,7 +60,7 @@ class Choose extends Component {
           Male
         </button>
         <button
-          className="selectBtn"
+          className={this.state.sex === "female" ? "selectedBtn" : "selectBtn"}
           onClick={() => {
             this.handleClick("sex", "female");
           }}
@@ -70,7 +70,7 @@ class Choose extends Component {
         <br />
         <h3>What size is your cat?</h3>
         <button
-          className="selectBtn"
+          className={this.state.size === "small" ? "selectedBtn" : "selectBtn"}
           onClick={() => {
             this.handleClick("size", "small");
           }}
@@ -78,7 +78,7 @@ class Choose extends Component {
           Small
         </button>
         <button
-          className="selectBtn"
+          className={this.state.size === "large" ? "selectedBtn" : "selectBtn"}
           onClick={() => {
             this.handleClick("size", "large");
           }}
