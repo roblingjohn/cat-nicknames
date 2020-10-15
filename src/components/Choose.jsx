@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-
 class Choose extends Component {
   state = {
     sex: "none",
@@ -8,14 +7,30 @@ class Choose extends Component {
     isChosen: false,
   };
 
+  handleClick(choice, selection, event) {
+    if (choice === "sex") {
+      this.setState({
+        sex: selection,
+      });
+    }
+    else if (choice === "size") {
+      this.setState({
+        size: selection,
+      });
+    }
+    else {
+      this.setState({
+        sex: "female",
+      });
+    }
+    console.log(choice);
+    console.log(selection);
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.sex.value);
-    console.log(event.target.size.value);
     this.setState({
-      sex: event.target.sex.value,
-      size: event.target.size.value,
-      isChosen: true,
+      isChosen: true
     });
   };
 
@@ -37,28 +52,44 @@ class Choose extends Component {
     }
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
           <h3>
-            <label htmlFor="sex">What sex is your cat?</label>
-            <select id="sex" name="sex">
-              <option value="none">---</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
+            What sex is your cat?
           </h3>
+          <button
+            onClick={() => {
+              this.handleClick("sex", "male");
+            }}
+          >
+            Male
+          </button>
+          <button
+            onClick={() => {
+              this.handleClick("sex", "female");
+            }}
+          >
+            Female
+          </button>
           <br />
           <h3>
-            <label htmlFor="size">What size is your cat?</label>
-            <select id="size" name="size">
-              <option value="none">---</option>
-              <option value="small">Small</option>
-              {/* <option value="medium">Medium</option> */}
-              <option value="large">Large</option>
-            </select>
-            <br />
-            <button class="btn">GIMME A NICKNAME</button>
+            What size is your cat?
           </h3>
-        </form>
+          <button
+            onClick={() => {
+              this.handleClick("size", "small");
+            }}
+          >
+            Small
+          </button>
+          <button
+            onClick={() => {
+              this.handleClick("size", "large");
+            }}
+          >
+            Large
+          </button>
+          <br />
+
+          <button className="btn" onClick={this.handleSubmit}>GIMME A NICKNAME</button>
       </div>
     );
   }
